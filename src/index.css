@@ -1,0 +1,264 @@
+
+body {
+  background: #0f172a !important;
+  color: whitesmoke;
+  margin: 0px;
+  font-family: 'Poppins', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: #cfcccc;
+}
+
+span, label {
+  color: #cfcccc;
+}
+
+/* Quick Media Queries */
+
+
+/* Desktops and Laptops
+
+@media (max-width: 1080px) {
+  padding: 0 100px;
+}
+
+ */
+
+/* Large Mobile Devices
+@media (max-width: 768px) {
+  padding: 0 50px;
+}
+
+ */
+
+/* Smol Mobile Devices 
+@media (max-width: 480px) {
+  padding: 0 25px ;
+}
+
+*/
+/***********************/
+
+
+@media only screen and (min-width: 1080px) {
+
+  .menuBtn {
+    display: none !important;
+  }
+
+  .listings .cards {
+    zoom: 1 !important;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .appBarEnd {
+    display: none !important;
+  }
+
+  .sellBtn {
+    display: none !important;
+  }
+
+
+  .viewBtn {
+    margin-left: 35% !important;
+    zoom: .9;
+  }
+
+  .heading {
+    justify-content: center !important;
+  }
+
+  .brandLogo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 45%;
+    margin-top: 5px;
+    }
+    
+    .listings .cards {
+    zoom: .5 !important;
+    }
+
+  }
+
+  
+  @media only screen and (max-width: 400px) {
+
+
+    .brandLogo {
+      margin-left: 40% !important;
+    }
+
+    .heading {
+      justify-content: center !important;
+    }
+
+    .latest-listing-card {
+      margin-left: 1em;
+      zoom: 0.8;
+    }
+
+    .listings .cards {
+      zoom: .9 !important;
+    }
+
+      .viewBtn {
+        margin-left: 27.5% !important;
+      }
+
+
+
+
+}
+
+
+.Navbar {
+  background-color: transparent;
+}
+
+.form-control, .form-select {
+  background-color: #0f172a7a !important;
+  color: #cfcccc !important;
+}
+
+
+.svgBtn{
+  font-size: 32px;
+  color: #cfcccc;
+  padding-right: 10px;
+  text-decoration: none;
+  vertical-align: middle;
+} 
+
+.viewBtn {
+  position: absolute;
+  left: 0; 
+  margin-left: 45%;
+  border: 2px solid #cfcccc;
+  padding: .5em 1em;
+
+}
+
+.dropbtn, .profileBtn {
+  font-size: 32px;
+  border: none;
+  vertical-align: middle;
+}
+
+.profileBtn {
+  cursor: default;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  min-width: 260px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a, .greet {
+  color: whitesmoke;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(221, 221, 221, 0.247);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  right: 0;
+}
+
+.gradientBackground {
+background-image: linear-gradient(112.1deg, rgba(32, 38, 57, 1) 11.4%, rgba(63, 76, 119, 1) 70.2%);
+background-size: 600% 600%;
+
+   }
+
+.glass {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+} 
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+}
+
+/* Animation */
+
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+
+  .content {
+    height: 30vh;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,132 @@
+.viewParentDiv {
+  padding-top: 4em;
+  display: flex;
+}
+
+.productSection {
+  margin-top: 3em;
+  border: 1px solid #cfcccc ;
+  border-radius: 6px;
+}
+
+.viewParentDiv .imageShowDiv {
+  width: fit-content;
+  --bs-gutter-x: none !important;
+  --bs-gutter-y: none !important;
+  padding-left: none !important;
+  padding-right: none !important;
+  
+}
+
+.viewParentDiv .imageShowDiv img {
+  width: 60vw;
+  height:60vh;
+  margin-top: 1em;
+  object-fit: contain;
+}
+
+.productName {
+  padding-bottom: 1em;
+}
+
+.productInfo {
+  padding: 1em;
+}
+
+.headingProduct {
+  text-align: center;
+  /* padding-right: calc(var(--bs-gutter-x) * 1.5) !important; */
+  padding-bottom: .5em;
+}
+
+.headingProduct {
+  position: relative; 
+}
+
+.headingProduct:after {
+  content: "";
+  height: 5px;
+  border-bottom: 1px solid #cfcccc;
+  top: 0;
+  width: 600px;
+}
+
+.headingProduct:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.viewParentDiv .rightSection {
+  margin-top: 3em;
+  width: 30vw;
+  padding-left: 1em;
+  margin-left: 3em;
+}
+
+.viewParentDiv .rightSection .productDetails :first-child {
+  font-weight: 700;
+  color: whitesmoke;
+  font-size: 34px;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+
+.viewParentDiv .rightSection .productDetails {
+  border: 1px solid #cfcccc7a;
+  padding: 6px;
+  border-radius: 6px;
+  margin-bottom: 1em;
+  width: 100%;
+  padding: 1.5em;
+}
+
+.viewParentDiv .rightSection .contactDetails {
+  border: 1px solid #cfcccc7a;
+  padding: 6px;
+  border-radius: 6px;
+  padding: 1.5em;
+  
+}
+
+.viewParentDiv .rightSection .productDescription {
+  border: 1px solid #cfcccc7a;
+  padding: 6px;
+  border-radius: 6px;
+  margin-bottom: 2em;
+}
+
+
+.viewParentDiv .rightSection .contactDetails .productDescription :first-child {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: whitesmoke;
+  font-weight: 400;
+  padding: 0;
+}
+
+.loginxCreateBtn {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  color: #cfcccc !important;
+  font-size: larger !important;
+  border: 1px solid #cfcccc !important;
+  padding: .5em 1em !important;
+
+}
+
+.loginxCreateBtn:hover {
+  color: rgba(0, 0, 0, 1) !important;
+  background-color: #cfcccc !important;
+}
+
+.date {
+  position: absolute;
+  font-size: small;
+  right: 0;
+  bottom: 0;
+  padding: 0 .5em .5em 0;
+  }
+
+.p-bold{
+  font-weight: bolder;
+}

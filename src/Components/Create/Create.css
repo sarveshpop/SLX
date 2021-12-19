@@ -1,0 +1,41 @@
+.centerDiv {
+    border: 1px solid black;
+    width: max-content;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+  }
+  .input {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    outline-color: transparent;
+    margin-bottom:35px ;
+    background-color: transparent;
+  }
+  
+  img[src=''] {
+    display: none;
+  }
+
+  .uploadBtn {
+    margin-top: 30px;
+    margin-left: 30%;
+    width: 40%;
+    height: 48px;
+    border: 1px solid #cfcccc !important;
+    background-color: #002f34;
+    color: #cfcccc !important;
+    font-weight: 900;
+  }
+  .uploadBtn:hover {
+    background-color: #cfcccc;
+    color: black !important;
+    border: 2px solid #002f34;
+  }
+  .centerDiv label{
+    font-weight: bold;
+  }

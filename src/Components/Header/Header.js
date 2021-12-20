@@ -29,6 +29,8 @@ function Header(props) {
 
   const history = useHistory();
 
+
+
     const { user } = useContext(AuthContext);
   
   const logoutHandler = () => {
@@ -55,7 +57,7 @@ function Header(props) {
 
   const drawer = (
         <React.Fragment>
-          <SwipeableDrawer disableBackdropTransition={!iOS} disableDiscovery={iOS} 
+          <SwipeableDrawer  className='drawer' disableBackdropTransition={!iOS} disableDiscovery={iOS} 
            open={openDrawer} onClose={() => setOpenDrawer(false)} onOpen={() => setOpenDrawer(true)}>
            <div className="glass"/>
            {user ? (<Container>

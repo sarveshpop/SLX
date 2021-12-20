@@ -40,7 +40,11 @@ span, label {
     display: none;
   }
 
-.greetText {
+.greetMobile {
+  display: none;
+}
+
+.mobile {
   display: none;
 }
 
@@ -62,6 +66,10 @@ span, label {
 
 @media only screen and (max-width: 991.98px) {
 
+  .lff {
+    display: none;
+  }
+
   .appBarEnd {
     display: none !important;
   }
@@ -80,11 +88,18 @@ span, label {
     display: block;
   }
   
- .greetText {
+ .greetMobile {
    display: block;
    font-size: 3.5rem ;
    margin-top: 2em;
  }
+
+.mobile {
+  display: block;
+  text-align: center;
+  margin-left: 15%;
+  padding-bottom: 1em;
+}
 
  .heroDiv {
    padding: 8rem 0 !important;
@@ -106,8 +121,8 @@ span, label {
     margin-top: 5px;
     }
     
-    .listings .cards {
-    zoom: .5 !important;
+    .listings {
+      margin: 0 !important;
     }
 
     .big-heading {
@@ -164,6 +179,37 @@ span, label {
       padding-left: 0 !important;
     }
 
+    html {
+      scrollbar-width: 0 !important;
+    }
+
+    body::-webkit-scrollbar {
+      display: none !important;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      display: none !important;
+    }
+
+    .mobile {
+      margin-left: 0;
+    }
+
+    .card-group {
+      display: contents !important;
+    }
+
+    .usp {
+      height: auto !important;
+      width: 350px !important;
+      margin-bottom: 5em !important;
+      margin-left: 2em !important;
+    }
+
+    .viewBtn {
+      margin-left: 35% !important;
+    }
+
   }
 
   
@@ -178,6 +224,13 @@ span, label {
       justify-content: center !important;
     }
 
+    .usp {
+      height: auto !important;
+      width: 280px !important;
+      margin-left: 1em !important;
+
+    }
+
     .latest-listing-card {
       margin-left: 1em;
       zoom: 0.8;
@@ -185,7 +238,7 @@ span, label {
 
 }
 
-@media only screen and (max-width: 376.98px) {
+@media only screen and (max-width: 356.98px) {
 
 
   .brandLogo {
@@ -194,6 +247,13 @@ span, label {
 
   .heading {
     justify-content: center !important;
+  }
+
+  .usp {
+    height: auto !important;
+    width: 230px !important;
+    
+
   }
 
   .latest-listing-card {
@@ -326,14 +386,13 @@ background-size: 600% 600%;
 }
 
 .right-positioner {
-  position: absolute;
   right: 0;
-  padding-right: 15%;
+  margin-left: 10em;
   text-align: right;
 }
 
 .big-heading {
-  font-size: 6rem;
+  font-size: 5.5rem;
   font-weight: 600;
   padding-top: .5em;
 }

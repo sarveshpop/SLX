@@ -79,11 +79,6 @@ span, label {
   }
 
 
-  .viewBtn {
-    margin-left: 38% !important;
-    zoom: .75;
-  }
-
   .menuBtn {
     display: block;
   }
@@ -207,7 +202,7 @@ span, label {
     }
 
     .viewBtn {
-      margin-left: 35% !important;
+      margin-left: 30% !important;
     }
 
   }
@@ -285,7 +280,7 @@ span, label {
 .viewBtn {
   position: absolute;
   left: 0; 
-  margin-left: 45%;
+  margin-left: 48%;
   border: 2px solid #cfcccc;
   padding: .5em 1em;
 

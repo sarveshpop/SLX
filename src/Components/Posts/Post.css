@@ -40,12 +40,12 @@
   margin: 16px 24px 16px 24px;
   background-color: rgba(0,0,0,.25);
   border-radius: 0 !important;
-  padding: 1em;
 }
 
 .listings .heading span {
   font-size: 24px;
   color: whitesmoke;
+  margin: 1em;
 }
 .postParentDiv{
   padding: auto;

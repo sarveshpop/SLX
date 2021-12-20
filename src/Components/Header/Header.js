@@ -1,12 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { useHistory } from "react-router";
-import { AllPostContext } from "../../contextStore/AllPostContext";
-import { PostContext } from "../../contextStore/PostContext";
 import CssBaseline from '@mui/material/CssBaseline';
 import "./Header.css";
 import AppBar from '@mui/material/AppBar';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
+import { SwipeableDrawer } from "@mui/material";
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
 import Container from '@mui/material/Container';
 import Slide from '@mui/material/Slide';
 import Box from '@mui/material/Box';
@@ -70,12 +72,88 @@ function Header(props) {
   const [openSignup, setOpenSignup] = React.useState(false);
   const [openLogin, setOpenLogin] = React.useState(false);
   const [openCreate, setOpenCreate] = React.useState(false);
+  const [openDrawer, setOpenDrawer] = React.useState(false)
   const handleOpenSignup = () => setOpenSignup(true);
   const handleCloseSignup = () => setOpenSignup(false);
   const handleOpenLogin = () => setOpenLogin(true);
   const handleCloseLogin = () => setOpenLogin(false);
   const handleOpenCreate = () => setOpenCreate(true);
   const handleCloseCreate = () => setOpenCreate(false);
+
+  const iOS =
+  typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+  const drawer = (
+        <React.Fragment>
+          <SwipeableDrawer disableBackdropTransition={!iOS} disableDiscovery={iOS} 
+           open={openDrawer} onClose={() => setOpenDrawer(false)} onOpen={() => setOpenDrawer(true)}>
+           <div className="glass"/>
+           {user ? (<Container>
+                <List >
+            <ListItem 
+            onClick={()=> {setOpenDrawer(false); }}
+            button>
+              <ListItemText className="listText" disableTypography> Hello, {user.displayName} </ListItemText>
+            </ListItem>
+
+            <ListItem 
+            onClick={()=> {setOpenDrawer(false); }}
+            button>
+              <ListItemText className="listText" disableTypography> Profile </ListItemText>
+            </ListItem>
+
+            <Link to="./viewmore">
+            <ListItem 
+            onClick={()=> {setOpenDrawer(false); }}
+            button>
+              <ListItemText className="listText" disableTypography> Browse </ListItemText>
+            </ListItem>
+            </Link>
+
+            <ListItem 
+            onClick={()=> {setOpenDrawer(false); handleOpenCreate(true)}}
+            button>
+              <ListItemText className="listText" disableTypography> Sell </ListItemText>
+            </ListItem>
+
+            <ListItem 
+            onClick={()=> {setOpenDrawer(false); logoutHandler(true)}}
+            button>
+              <ListItemText className="listText" disableTypography>Logout</ListItemText>
+            </ListItem>
+
+          </List>
+           </Container>) : (
+
+             <Container>
+                <List >
+            <ListItem 
+            onClick={()=> {setOpenDrawer(false); handleOpenLogin(true)}}
+            button>
+              <ListItemText className="listText" disableTypography> Login </ListItemText>
+            </ListItem>
+
+            <ListItem 
+            onClick={()=> {setOpenDrawer(false); handleOpenSignup(true)}}
+            button>
+              <ListItemText className="listText" disableTypography> Signup </ListItemText>
+            </ListItem>
+
+            <Link to="./viewmore">
+            <ListItem 
+            onClick={()=> {setOpenDrawer(false); }}
+            button>
+              <ListItemText className="listText" disableTypography> Browse </ListItemText>
+            </ListItem>
+            </Link>
+
+          </List>
+           </Container>
+           )}
+          
+          </SwipeableDrawer>
+        </React.Fragment>
+      )
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -97,41 +175,24 @@ function HideOnScroll(props) {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-    <AppBar elevation={2} color="transparent" >
+    <AppBar elevation={3} color="transparent" className="glassBar">
     <Toolbar>
-          <span className="material-icons svgBtn menuBtn">menu</span>
+          <span className="material-icons svgBtn menuBtn" onClick={() => setOpenDrawer(!openDrawer)}>menu</span>
+          {drawer}
             <div xs={2} display='block' className="brand d-flex justify-content-start">
               <a href="/" component={Link} to="/"><img src={logoW} alt="logo" className="brandLogo" /></a>
             </div>
-        
-{/*         <div className="placeSearch">
-          <input type="text" 
-          placeholder="Search specific product..."
-          value={wordEntered}
-          onChange={handleFilter}
-        />{filteredData.length === 0 ? (
-          <div onClick={handleEmptyClick}> <SearchIcon /> </div>
-         ) : (
-           <div id="clearBtn"  onClick={clearInput} > <Arrow></Arrow></div>
-         )}
-          {filteredData.length !== 0 && (
-        <div className="dataResult-header">
-          {filteredData.slice(0, 15).map((value, key) => {
-            return (
-              <div key={key} className="dataItem-header" onClick={()=>handleSelectedSearch(value)}>
-                <p>{value.name} </p>
-              </div>
-            );
-          })}
-        </div>
-      )}
-         
-        </div> */}
 
         <div className="productSearch">
           <Search />
         </div>
         <div className="appBarEnd">
+        <Link to="./viewmore">
+          <button className="btn loginBtn">
+                <span className="material-icons svgBtn">apps</span>
+                 <span>Browse</span>
+          </button>
+          </Link>
         <div className="login">
           {user ? (<Container>
           <div className="loggedInGroup">
@@ -148,23 +209,29 @@ function HideOnScroll(props) {
               <a href="#" onClick={logoutHandler}><span onClick={logoutHandler} className="logout-span">
               <span className="material-icons svgBtn">logout</span>
               Logout</span></a>
+              </div>  
               </div>
-              </div>
+              <button className="btn sellBtn" onClick={handleOpenCreate}>
+                <span className="material-icons svgBtn">storefront</span>
+                <span>SELL</span>
+             </button>
           </div>
           </Container>
             /*  */
           ) : (
+            <>
             <button className="btn outline loginBtn" onClick={handleOpenLogin}>
-              <span className="material-icons svgBtn">login</span>
-              <span>Login</span>
-            </button>
+                <span className="material-icons svgBtn">login</span>
+                 <span>Login</span>
+              </button>
+              <button className="btn outline loginBtn" onClick={handleOpenSignup}>
+              <span className="material-icons svgBtn">person_add</span>
+                  <span>Sign-up</span>
+              </button></>
           )}
         </div>
         
-          <button className="btn sellBtn" onClick={handleOpenCreate}>
-          <span className="material-icons svgBtn">storefront</span>
-          <span>SELL</span>
-          </button>
+          
         </div>
         </Toolbar>
     </AppBar>
@@ -183,7 +250,7 @@ function HideOnScroll(props) {
         }}>
     <Fade in={openLogin}>
           <Box>
-    <Login/>
+      <Login/>
     </Box>
         </Fade>
       </Modal>
@@ -219,6 +286,7 @@ function HideOnScroll(props) {
     </Box>
         </Fade>
       </Modal>
+
           
     </React.Fragment>
   );

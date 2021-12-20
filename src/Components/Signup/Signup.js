@@ -1,20 +1,14 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "./Signup.css";
 import { Firebase } from "../../firebase/config";
-import { useHistory } from "react-router";
-import SignUpLoading from "../Loading/SignUpLoading";
 import signupArt from "../../assets/images/SpacePond.png"
 
 export default function Signup() {
-  const history = useHistory();
   let [name, setName] = useState("");
   let [email, setEmail] = useState("");
   let [phone, setPhone] = useState("");
   let [password, setPassword] = useState("");
-  let [loading,setLoading]=useState(false)
   const handleSubmit = (e) => {
-    setLoading(true)
     e.preventDefault();
     Firebase.auth()
       .createUserWithEmailAndPassword(email, password)
@@ -28,11 +22,10 @@ export default function Signup() {
         });
       })
       .then(() => {
-        history.push("/");
+        window.location.reload("/");
       });
   };
-  return (<>
-    {loading && <SignUpLoading/> } <div>
+  return (<> <div>
       <div className="signupParentDiv glass">
         <form action="?" method="POST" onSubmit={handleSubmit}>
         <div className="container">
@@ -63,7 +56,7 @@ export default function Signup() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             name="name"/>
-          <label for="floatingName">Full Name</label>
+          <label htmlFor="floatingName">Full Name</label>
           </div>
           <br/>
           <div className="form-floating">
@@ -75,7 +68,7 @@ export default function Signup() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             name="email" />
-          <label for="floatingEmail">Email Address</label>
+          <label htmlFor="floatingEmail">Email Address</label>
           </div>
           <br/>
           <div className="form-floating">
@@ -87,7 +80,7 @@ export default function Signup() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             name="phone"/>
-          <label for="floatingPhone">Phone Number</label>
+          <label htmlFor="floatingPhone">Phone Number</label>
           </div>
           <br/>
           <div className="form-floating">
@@ -99,12 +92,12 @@ export default function Signup() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             name="password"/>
-          <label for="floatingPassword">Password</label>
+          <label htmlFor="floatingPassword">Password</label>
           </div>
           <br/>
           <div className="form-check">
             <input className="form-check-input" type="checkbox" value="" id="flexCheck"/>
-            <label className="form-check-label" for="flexCheck">
+            <label className="form-check-label" htmlFor="flexCheck">
               I agree to the SLX <a className="d-inline" href="https://www.termsandconditionsgenerator.com/live.php?token=csjj8V5vX9bNfK8ydFXGFOD5Nc1Q8z9Z"> Terms and Conditions</a>.
             </label>
           </div>
@@ -113,11 +106,6 @@ export default function Signup() {
           <button className="btn loginxxBtn">Sign-up </button>
           </div>
           </div>
-          </div>
-          <div className="text-center pt-3">
-          <br/>
-          <br/>
-            <span className="d-inline"> Already a member? <a className="d-inline" href="/"> Login</a></span>
           </div>
           </div>
         </form>

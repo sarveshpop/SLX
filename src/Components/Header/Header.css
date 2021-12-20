@@ -13,6 +13,15 @@
   align-items: center;
 }
 
+a {
+  color: #cfcccc !important;
+  text-decoration: none !important;
+}
+
+.listText {
+  font-size: larger;
+}
+
 .placeSearch {
   width: 16em;
   height: 48px;
@@ -24,10 +33,6 @@
   background-color: white;
 }
 
-.placeSearch ::selection {
-  border-color: #23e5db;
-  outline-color: #23e5db;
-}
 
 .placeSearch input {
   border-color: transparent;
@@ -39,80 +44,12 @@
   height: 48px;
   margin-left: 2em;
   border-radius: 4px;
-  /* border: 2px solid #002f34; */
-  /* display: flex;
-  align-items: center; */
-  /* background-color: white; */
-  /* display: flex;
-  align-items: center; */
-  /* justify-content: space-between; */
-}
 
-/* .productSearch .input {
-  width: 100%;
-  height: 100%;
-  display: flex;
 }
-
-.productSearch .input input {
-  border-color: transparent;
-  outline-color: transparent;
-  width: 100%;
-  align-items: center;
-}
-
-.productSearch .searchAction {
-  min-width: 48px;
-  height: 48px;
-  position: relative;
-  display: flex;
-  cursor: pointer;
-  background-color: #002f34;
-  border-radius: 0 4px 4px 0;
-}
-
-.productSearch .searchAction svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  fill: white;
-} */
 
 .brandLogo {
   width: 50px;
   margin: 0 10px;
-}
-
-@media only screen and (min-width: 1080px) {
-    
-  .menuBtn {
-      display: none !important;
-    }
-
-
-
-
-}
-
-@media only screen and (max-width: 768px) {
-
-  .appBarEnd {
-    display: none !important;
-  }
-
-  .sellBtn {
-    display: none !important;
-  }
-
-  .brandLogo {
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin-left: 45%;
-    margin-top: 5px;
-  }
-
 }
 
 
@@ -124,6 +61,14 @@
   font-weight: bolder;
   margin-right: 5px;
   cursor: pointer;
+}
+
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  color: #cfcccc !important;
+  width: 40%;
 }
 
 .loginPage hr {
@@ -148,9 +93,6 @@
   color: #002f34;
 }
 
-/* .sellMenu .sellMenuContent svg {
-  align-items: center;
-} */
 .sellMenu .sellMenuContent span {
   margin-left: 5px;
 }
@@ -174,8 +116,13 @@
   margin-top: 2.5px;
 }
 
+.loginBtn:active {
+ box-shadow: inset 5px 4px 11px 0px #0000009a !important;
+}
+
 .sellBtn {
   border: 1px solid whitesmoke !important;
+  margin-left: 2em;
 }
 
 .sellBtn:hover {
@@ -183,7 +130,7 @@
 }
 
 .loggedInGroup {
-  margin-top: .5em;
+  margin-top: .15em;
 }
 
 .appBarEnd{

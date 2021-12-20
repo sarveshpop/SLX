@@ -1,8 +1,6 @@
 import React,{useState,useContext} from 'react'
 import {AllPostContext} from "..//../contextStore/AllPostContext"
 import { PostContext } from '../../contextStore/PostContext'
-import SearchIcon from "..//../assets/SearchIcon"
-import CloseIcon from "..//../assets/CloseIcon/CloseIcon"
 import { useHistory } from 'react-router'
 import "./search.css"
 function Search() {
@@ -27,10 +25,6 @@ function Search() {
     }
   };
 
-  const clearInput = () => {
-    setFilteredData([]);
-    setWordEntered("");
-  };
   const handleSelectedSearch=(item)=>{
        setPostContent(item)
        history.push("/view")

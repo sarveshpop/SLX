@@ -7,14 +7,6 @@ import "./allposts.css";
 function AllPosts() {
   
   const { allPost } = useContext(AllPostContext);
-  let displayAllPosts = allPost.map((product, index) => {
-    return (
-      <div className="all-post-card">
-        {" "}
-        <PostCards product={product} index={index} />{" "}
-      </div>
-    );
-  });
   
   let length = allPost.length; //if user refresh the whole page context will be empty so we want to redirect the user to the home page
   const history = useHistory();

@@ -2,20 +2,16 @@ import React, { Fragment, useState, useContext } from "react";
 import "./Create.css";
 import { Firebase } from "../../firebase/config";
 import { AuthContext } from "../../contextStore/AuthContext";
-import { useHistory } from "react-router";
 
 const Create = () => {
   const { user } = useContext(AuthContext);
-  const history = useHistory();
   let [name, setName] = useState("");
   let [category, setCategory] = useState("");
   let [price, setPrice] = useState("");
   let [description, setDescription] = useState("");
   let [image, setImage] = useState();
-  let [loading,setLoading]=useState(false);
   
   const handleSubmit = () => {
-    setLoading(true);
     let date = new Date().toDateString();
     Firebase.storage()
       .ref(`/image/${image.name}`)
@@ -34,7 +30,7 @@ const Create = () => {
               createdAt: date,
             })
             .then(() => {
-              history.push("/");
+              window.location.reload("/");
             });
         });
       });
@@ -53,10 +49,10 @@ const Create = () => {
             onChange={(e) => {
               setName(e.target.value);
             }}/>
-            <label for="floatingName">Product Title</label>
+            <label htmlFor="floatingName">Product Title</label>
           </div>
           <br />
-          <div class="form-floating">
+          <div className="form-floating">
             <select
               name="Category"
               className="form-select" 
@@ -73,10 +69,10 @@ const Create = () => {
                 <option value="Motorcycles">Motorcycles</option>
                 <option value="Other">Other</option>
             </select>
-            <label for="floatingSelect">Product Category</label>
+            <label htmlFor="floatingSelect">Product Category</label>
           </div>
         <br />
-        <div class="form-floating">
+        <div className="form-floating">
         <input
           className="form-control"
           type="number"
@@ -87,10 +83,10 @@ const Create = () => {
           onChange={(e) => {
             setPrice(e.target.value);
           }}/>
-          <label for="floatingPrice">Product Price</label>
+          <label htmlFor="floatingPrice">Product Price</label>
         </div>
         <br />
-        <div class="form-floating">
+        <div className="form-floating">
         <textarea
           className="form-control"
           type="text"
@@ -102,7 +98,7 @@ const Create = () => {
           onChange={(e) => {
             setDescription(e.target.value);
           }}/>
-          <label for="floatingDescription">Product Description</label>
+          <label htmlFor="floatingDescription">Product Description</label>
         </div>
         <br />
         <img
@@ -111,7 +107,7 @@ const Create = () => {
           height="200px"
           src={image ? URL.createObjectURL(image) : ""}/>
         <br />
-        <label for="formFile" className="form-label">Select the product image</label>
+        <label htmlFor="formFile" className="form-label">Select the product image</label>
         <input
           className="form-control   "
           type="file"

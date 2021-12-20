@@ -1,7 +1,7 @@
 {
   "short_name": "React App",
-  "name": "Create React App OLX",
-  "start_url": ".",
+  "name": "Create React",
+  "start_url": "./",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

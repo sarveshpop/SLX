@@ -3,11 +3,10 @@
   margin: 50px 0;
 }
 .pagination li {
-  color: #03080a;
+  color: #cfcccc;
   font-weight: bolder;
   width: 30px;
   height: 30px;
-  border: 1px solid gray;
   border-radius: 1px;
   margin: 0 5px;
   display: flex;
@@ -19,9 +18,10 @@
   
 }
 .pagination li:hover {
-  background-color: rgb(106, 219, 200);;
-  border-color: #ebeeef;
+  background-color: rgba(0,0,0,.5);
+  color: #cfcccc !important;
 }
 .active {
-  background-color: rgb(7, 192, 216);
+  background-color: #cfcccc;
+  color: #03080a !important;
 }

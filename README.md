@@ -7,6 +7,12 @@
 
 > Assignment (Web Developer)
 
+## 📝 [TO DO] 
+       ● Deliver images through CDN for perfromance increase
+       ● Migrate data to MERN
+       ● Fully implement CRUD
+       ● Add Profile Page
+
 ### 🏠 [Homepage](slx.netlify.app)
 
 ### ✨ [Demo](slx.netlify.app)
@@ -36,10 +42,3 @@ npm run test
 * Website: sarvesh-patil.onrender.com
 * Twitter: [@ARKADE101](https://twitter.com/ARKADE101)
 * Github: [@sarveshpop](https://github.com/sarveshpop)
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

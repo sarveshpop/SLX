@@ -34,11 +34,21 @@ function View() {
       </Row>{" "}
       <Row className="productInfo">
         <h4 className="productName">{postContent.name}</h4>
+        <h4 className="mobile">&#x20B9; {postContent.price} </h4>
+        <br/>
         <h5 className="headingProduct">Product Description</h5>
         <p>{postContent.description}</p>
+        <br/>
+        <h5 className="text-center pt-5 mobile">Seller details</h5>
+        <div>
+        {userDetails &&
+         <><p className="mobile"> Name: {userDetails.name} </p><p className="mobile"> Phone: {userDetails.phone} </p></> }
+        </div>
+        <button className="btn loginxCreateBtn mobile">Buy Now</button>  
       </Row>
       </div>
-      <div className="rightSection col-md-4">
+     
+      <div className="rightSection col-md-4 lff">
         <div className="productDetails glass">
           <p>&#x20B9; {postContent.price} </p>
           <span>{postContent.name}</span>

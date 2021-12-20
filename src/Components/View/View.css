@@ -130,3 +130,10 @@
 .p-bold{
   font-weight: bolder;
 }
+
+@media only screen and (max-width: 991.98px) {
+
+  .viewParentDiv .imageShowDiv img {
+      width: 100vw;
+  }
+}

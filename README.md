@@ -13,9 +13,8 @@
        ● Fully implement CRUD
        ● Add Profile Page
 
-### 🏠 [Homepage](slx.netlify.app)
 
-### ✨ [Demo](slx.netlify.app)
+### ✨ [Demo] (slx.netlify.app)
 
 ## Install
 

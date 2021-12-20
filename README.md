@@ -21,6 +21,12 @@
 ```sh
 npm install
 ```
+OR
+
+```sh
+yarn add
+```
+
 
 ## Usage
 

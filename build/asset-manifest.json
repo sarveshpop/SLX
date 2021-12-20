@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0fcaaa38.chunk.css",
+    "main.js": "/static/js/main.9de8a9ca.chunk.js",
+    "main.js.map": "/static/js/main.9de8a9ca.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1b8cf7cd.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1b8cf7cd.js.map",
+    "static/js/2.abffcfbe.chunk.js": "/static/js/2.abffcfbe.chunk.js",
+    "static/js/2.abffcfbe.chunk.js.map": "/static/js/2.abffcfbe.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.0fcaaa38.chunk.css.map": "/static/css/main.0fcaaa38.chunk.css.map",
+    "static/js/2.abffcfbe.chunk.js.LICENSE.txt": "/static/js/2.abffcfbe.chunk.js.LICENSE.txt",
+    "static/media/Autonomy.56385fe8.png": "/static/media/Autonomy.56385fe8.png",
+    "static/media/Deliver.478be0bc.png": "/static/media/Deliver.478be0bc.png",
+    "static/media/Explore.48e5abf4.png": "/static/media/Explore.48e5abf4.png",
+    "static/media/Fly.6e35858e.png": "/static/media/Fly.6e35858e.png",
+    "static/media/SpacePond.74e67654.png": "/static/media/SpacePond.74e67654.png",
+    "static/media/Teamwork.3659ac06.png": "/static/media/Teamwork.3659ac06.png",
+    "static/media/Treasure.2dddce0e.png": "/static/media/Treasure.2dddce0e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b8cf7cd.js",
+    "static/js/2.abffcfbe.chunk.js",
+    "static/css/main.0fcaaa38.chunk.css",
+    "static/js/main.9de8a9ca.chunk.js"
+  ]
+}

@@ -26,38 +26,8 @@ import Create from "../Create/Create";
 
 
 function Header(props) {
-  // const{allPost}=useContext(AllPostContext)
-  // const{setPostContent}=useContext(PostContext)
+
   const history = useHistory();
-  // const [filteredData, setFilteredData] = useState([]);
-  // const [wordEntered, setWordEntered] = useState("");
-  /* const handleFilter = (event) => {
-    const searchWord = event.target.value;
-    setWordEntered(searchWord);
-    const newFilter = allPost.filter((value) => {
-      return value.name.toLowerCase().includes(searchWord.toLowerCase());
-    });
-
-    if (searchWord === "") {
-      setFilteredData([]);
-    } else {
-      setFilteredData(newFilter);
-    }
-  }; */
-
- /*  const clearInput = () => {
-    setFilteredData([]);
-    setWordEntered("");
-  };
-
-  const handleSelectedSearch=(value)=>{
-       setPostContent(value)
-       history.push("/view")
-
-  }
-  const handleEmptyClick=()=>{
-     alert("No items found.., please search by product name");
-  } */
 
     const { user } = useContext(AuthContext);
   

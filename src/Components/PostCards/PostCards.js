@@ -4,9 +4,9 @@ import {PostContext} from "../../contextStore/PostContext";
 import "./postcards.css"
 
 function PostCards({product,index}) {
-    let {setPostContent} = useContext(PostContext)//at the time of onClick on post ,the specified post item assigned to postContent by setPostContent function and it will be stored in a global context PostContext
- 
-    const history=useHistory()//at the time of onClick on post , we want redirect to the view post page
+    let {setPostContent} = useContext(PostContext)
+
+    const history=useHistory()
 
     return (
       <div className="card" key={index} onClick={()=>{

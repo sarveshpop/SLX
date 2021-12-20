@@ -26,15 +26,6 @@ function View() {
     }
   }, [history, postContent]);
 
-/*   
-const handlePurchase = () => {
-    Firebase.firestore()
-    .collection("products").doc().delete().then(() => {
-    }).catch((error) => {
-        console.error("Error removing document: ", error);
-    });
-      } */
-
   return (
     <div className="viewParentDiv container">
     <div className="productSection glass col-md-8">

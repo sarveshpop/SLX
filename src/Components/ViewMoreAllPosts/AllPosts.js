@@ -8,10 +8,9 @@ function AllPosts() {
   
   const { allPost } = useContext(AllPostContext);
   
-  let length = allPost.length; //if user refresh the whole page context will be empty so we want to redirect the user to the home page
+  let length = allPost.length;
   const history = useHistory();
 
-  //pagination logic and implementation will start here
   let [currentPage,setCurrentPage]=useState(1)
   let itemsPerPage=8
   let indexOfLastDish=currentPage*itemsPerPage

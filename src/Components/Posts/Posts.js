@@ -9,10 +9,10 @@ import { AllPostContext } from "../../contextStore/AllPostContext";
 
 function Posts() {
   const { setAllPost } = useContext(AllPostContext);
-  let [, setPosts] = useState([]); //for showing all posts in Descending order of date
-  let [posts2, setPosts2] = useState([]); //for showing all posts in Ascending order of date
+  let [, setPosts] = useState([]);
+  let [posts2, setPosts2] = useState([]); 
   useEffect(() => {
-    Firebase.firestore() //retreving all posts from firebase in descending order
+    Firebase.firestore() 
       .collection("products")
       .orderBy("createdAt", "desc")
       .get()
@@ -23,10 +23,10 @@ function Posts() {
             id: product.id,
           };
         });
-        setPosts2(allPostsDescendingOder); //set to post
+        setPosts2(allPostsDescendingOder); 
         setAllPost(allPostsDescendingOder);
       });
-    Firebase.firestore() //retreving all posts from firebase in asecnding order of date
+    Firebase.firestore() 
       .collection("products")
       .orderBy("createdAt", "asc")
       .get()

@@ -14,7 +14,7 @@
        ● Add Profile Page
 
 
-### ✨ [Demo] (slx.netlify.app)
+### ✨ [Demo](slx.netlify.app)
 
 ## Install
 

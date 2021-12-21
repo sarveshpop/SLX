@@ -3,6 +3,15 @@ import Fly from '../../assets/images/Fly.webp'
 import Deliver from '../../assets/images/Deliver.webp'
 import Autonomy from '../../assets/images/Autonomy.webp'
 
+const reach = <p> SLX provides a number of services over it's large network around the world, 
+                   From a bustling metropolis to a remote hamlet, extend your horizons with SLX.</p>
+
+const convenience = <p> Do not worry about logistics. with SLX you can choose to entrust logistics to us while
+                    you focus on your business. You sell, We deliver.</p>
+
+const autonomy = <p> From how you provide service, to who you provide it to; enjoy full autonomy over your 
+                     business with SLX. After all, Your business, Your Choice. </p>
+
 const Features = () => {
     return (
         <div className='postParentDiv container-fluid'>
@@ -24,10 +33,7 @@ const Features = () => {
                                 </h3>
                             </div>
                             <div className='card-text'>
-                                <p>
-                                    SLX provides a number of services over it's large network around the world, 
-                                    From a bustling metropolis to a remote hamlet, extend your horizons with SLX.
-                                </p>
+                                {reach}
                             </div>
                     </div>
                 </div>
@@ -43,10 +49,7 @@ const Features = () => {
                                 </h3>
                             </div>
                             <div className='card-text'>
-                                <p>
-                                    SLX provides a number of services over it's large network around the world, 
-                                    From a bustling metropolis to a remote hamlet, extend your horizons with SLX.
-                                </p>
+                                {convenience}
                             </div>
                         </div>
                     </div>
@@ -63,10 +66,7 @@ const Features = () => {
                                 </h3>
                             </div>
                             <div className='card-text'>
-                                <p>
-                                    SLX provides a number of services over it's large network around the world, 
-                                    From a bustling metropolis to a remote hamlet, extend your horizons with SLX.
-                                </p>
+                                {autonomy}
                             </div>
                     </div>
                 </div>

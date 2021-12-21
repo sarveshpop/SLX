@@ -405,6 +405,7 @@ background-size: 600% 600%;
   padding: 2em;
   text-align: center;  
   margin: 5em 0 10em 5em;
+  box-shadow: -2px 4px 10px .5px #0000009a;
 
 }
 

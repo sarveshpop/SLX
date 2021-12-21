@@ -367,10 +367,12 @@ background-size: 600% 600%;
 
 .heroAssetLeft{
   padding-left: 25%;
+  width: 550px;
 }
 
 .heroAssetRight {
   padding-right: 25%;
+  width: 650px;
 }
 
 .middle-positioner {

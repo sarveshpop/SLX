@@ -1,7 +1,7 @@
 import React from 'react' 
-import Fly from '../../assets/images/Fly.png'
-import Deliver from '../../assets/images/Deliver.png'
-import Autonomy from '../../assets/images/Autonomy.png'
+import Fly from '../../assets/images/Fly.webp'
+import Deliver from '../../assets/images/Deliver.webp'
+import Autonomy from '../../assets/images/Autonomy.webp'
 
 const Features = () => {
     return (

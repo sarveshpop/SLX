@@ -1,6 +1,6 @@
 import React from 'react'
-import Teamwork from '../../assets/images/Teamwork.png'
-import Treasure from '../../assets/images/Treasure.png'
+import Teamwork from '../../assets/images/Teamwork.webp'
+import Treasure from '../../assets/images/Treasure.webp'
 
 const heading = <span>Welcome To SLX</span>
 const subHeading1 = <span>We make commerce convenient.</span>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Signup.css";
 import { Firebase } from "../../firebase/config";
-import signupArt from "../../assets/images/SpacePond.png"
+import signupArt from "../../assets/images/SpacePond.webp"
 
 export default function Signup() {
   let [name, setName] = useState("");
@@ -42,7 +42,7 @@ export default function Signup() {
         <div className="col-md-1">
           <div className="divider"></div>
         </div>
-        <div className="g-recaptcha col-md-6  signupForm order-last" data-sitekey="6Lfulq8dAAAAAMIFYwM9a2Y12U5q0uIYguoFzXjS">
+        <div className="col-md-6  signupForm order-last" data-sitekey="6Lfulq8dAAAAAMIFYwM9a2Y12U5q0uIYguoFzXjS">
           <br/> 
           <br/>
           <h3 className="text-center">Sign-up</h3>

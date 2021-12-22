@@ -14,12 +14,12 @@ const Hero = () => {
     return (
         <div className='postParentDiv container-fluid'>
         <h1 className='text-center greetMobile mobile focus-in-expand'>{heading}</h1>
-        <h3 className='mobile text-focus-in'>{subHeading1}</h3>
+        <h2 className='mobile text-focus-in'>{subHeading1}</h2>
         <img className='img-fluid mobile float-start slide-in-blurred-left' alt='Treasure' src={Treasure}/>
-        <h4 className='mobile text-focus-in'>{heroDesc1}</h4>
-        <h3 className='mobile text-focus-in'>{subHeading2}</h3>
+        <h3 className='mobile text-focus-in fs-4'>{heroDesc1}</h3>
+        <h2 className='mobile text-focus-in'>{subHeading2}</h2>
         <img className='img-fluid mobile float-start slide-in-blurred-right' alt='Treasure' src={Teamwork}/>
-        <h4 className='mobile text-focus-in'>{heroDesc2}</h4>
+        <h3 className='mobile text-focus-in fs-4'>{heroDesc2}</h3>
           <div className='lff'>
           <br/>
             <div className='row pb-5 heroDiv'>

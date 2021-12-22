@@ -28,9 +28,9 @@ const Features = () => {
                         <img alt="Fly Asset" className="img-fluid" src={Fly}/>
                         </div>
                             <div className="card-body">
-                                <h3 className='card-title text-center'>
+                                <span className='card-title text-center fw-bold fs-3'>
                                     Reach
-                                </h3>
+                                </span>
                             </div>
                             <div className='card-text'>
                                 {reach}
@@ -44,9 +44,9 @@ const Features = () => {
                         <img alt="Deliver Asset" className="img-fluid" src={Deliver}/>
                         </div>
                             <div className="card-body">
-                                <h3 className='card-title text-center'>
+                                <span className='card-title text-center fw-bold fs-3'>
                                     Convenience
-                                </h3>
+                                </span>
                             </div>
                             <div className='card-text'>
                                 {convenience}
@@ -61,9 +61,9 @@ const Features = () => {
                         <img alt="Autonomy Asset" className="img-fluid" src={Autonomy}/>
                         </div>
                             <div className="card-body">
-                                <h3 className='card-title text-center'>
+                                <span className='card-title text-center fw-bold fs-3'>
                                     Autonomy
-                                </h3>
+                                </span>
                             </div>
                             <div className='card-text'>
                                 {autonomy}

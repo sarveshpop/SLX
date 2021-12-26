@@ -122,12 +122,12 @@ a {
 }
 
 .sellBtn {
-  border: 1px solid whitesmoke !important;
+  background-color: #ebeeef !important;
   margin-left: 2em;
 }
 
 .sellBtn:hover {
-  background-color: #cfcccc5a;
+  border: 1px solid whitesmoke !important;
 }
 
 .loggedInGroup {

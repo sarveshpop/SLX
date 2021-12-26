@@ -24,14 +24,10 @@ import Login from '../Login/Login'
 import Signup from "../Signup/Signup";
 import Create from "../Create/Create";
 
-
 function Header(props) {
 
   const history = useHistory();
-
-
-
-    const { user } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   
   const logoutHandler = () => {
     Firebase.auth()
@@ -69,7 +65,7 @@ function Header(props) {
             </ListItem>
 
             <ListItem 
-            onClick={()=> {setOpenDrawer(false); }}
+            onClick={()=> {setOpenDrawer(false);  }}
             button>
               <ListItemText className="listText" disableTypography> Profile </ListItemText>
             </ListItem>
@@ -177,19 +173,20 @@ function HideOnScroll(props) {
               </span>
               <div className="dropdown-content">
               <span className="greet">Hello, {user.displayName}</span>
-              <a href="/profile">View Profile</a>
+              <Link to="./profile">
+              <span>View Profile</span>
+              </Link>
               <a href="#" onClick={logoutHandler}><span onClick={logoutHandler} className="logout-span">
               <span className="material-icons svgBtn">logout</span>
               Logout</span></a>
               </div>  
               </div>
               <button className="btn sellBtn" onClick={handleOpenCreate}>
-                <span className="material-icons svgBtn">storefront</span>
-                <span>SELL</span>
+                <span className="material-icons text-black svgBtn">storefront</span>
+                <span className="text-black fw-bold">SELL</span>
              </button>
           </div>
           </Container>
-            /*  */
           ) : (
             <>
             <button className="btn outline loginBtn" onClick={handleOpenLogin}>
@@ -211,7 +208,7 @@ function HideOnScroll(props) {
     </HideOnScroll>
     <br/> 
     
-            <Modal
+      <Modal
         aria-labelledby="Login Modal"
         open={openLogin}
         onClose={handleCloseLogin}
@@ -258,7 +255,6 @@ function HideOnScroll(props) {
     </Box>
         </Fade>
       </Modal>
-
           
     </React.Fragment>
   );

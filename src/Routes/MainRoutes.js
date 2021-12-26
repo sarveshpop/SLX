@@ -3,11 +3,10 @@ import {BrowserRouter as Router , Route} from 'react-router-dom'
 import Home from '../Pages/Home'
 import Signup from '../Pages/Signup'
 import Login from '../Pages/Login'
+import Profile from '../Pages/Profile'
 import CreatePost from '../Pages/CreatePost'
 import ViewPost from '../Pages/ViewPost'
 import ViewMore from '../Pages/ViewMore'
-
-
 
 
 function MainRoutes() {
@@ -30,6 +29,9 @@ function MainRoutes() {
            </Route>
            <Route path="/viewmore">
                <ViewMore/>
+           </Route>
+           <Route path="/profile">
+               <Profile/>
            </Route>     
        </Router>
     )

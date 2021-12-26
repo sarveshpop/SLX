@@ -34,6 +34,7 @@ const Create = () => {
             });
         });
       });
+      
   };
   return (
     <Fragment>
@@ -109,7 +110,7 @@ const Create = () => {
         <br />
         <label htmlFor="formFile" className="form-label">Select the product image</label>
         <input
-          className="form-control   "
+          className="form-control"
           type="file"
           id="formFile"
           onChange={(e) => {

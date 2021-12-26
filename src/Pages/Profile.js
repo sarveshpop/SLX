@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-const Profile = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+import Header from "../Components/Header/Header"
+import Profile from "../Components/Profile/Profile";
+
+function ProfilePage() {
+  return (
+    <div>
+      <Header />
+      <Profile />
+    </div>
+  );
 }
 
-export default Profile
+export default ProfilePage;

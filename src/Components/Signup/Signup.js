@@ -18,6 +18,7 @@ export default function Signup() {
             id: result.user.uid,
             name: name,
             phone: phone,
+            email: email,
           });
         });
       })
@@ -98,7 +99,7 @@ export default function Signup() {
           <div className="form-check">
             <input className="form-check-input" type="checkbox" value="" id="flexCheck"/>
             <label className="form-check-label" htmlFor="flexCheck">
-              I agree to the SLX <a className="d-inline" href="https://www.termsandconditionsgenerator.com/live.php?token=csjj8V5vX9bNfK8ydFXGFOD5Nc1Q8z9Z"> Terms and Conditions</a>.
+              I agree to the SLX <a className="d-inline" href="https://bit.ly/3szzqmf"> Terms and Conditions</a>.
             </label>
           </div>
           <br/>

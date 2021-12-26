@@ -11,6 +11,7 @@ function Posts() {
   const { setAllPost } = useContext(AllPostContext);
   let [, setPosts] = useState([]);
   let [posts2, setPosts2] = useState([]); 
+  
   useEffect(() => {
     Firebase.firestore() 
       .collection("products")

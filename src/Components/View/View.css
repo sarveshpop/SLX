@@ -105,6 +105,52 @@
   padding: 0;
 }
 
+.successPopup {
+  position: absolute;
+  top: 40%;
+  left: 32.5%;
+  padding: 2em;
+  width: 700px;
+  backdrop-filter: blur(16px) brightness(0.5);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.successHead {
+  display: inline-flex;
+  padding-bottom: 1em;
+}
+
+.successTitle {
+  display: inline-flex;
+}
+
+.svgIcon {
+  font-size: 3em;  
+  vertical-align: middle;
+}
+
+.btnNavGroup {
+  padding-top: 1em;
+  justify-content: center;
+}
+
+.successNavBtn {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #cfcccc !important;
+  font-size: larger !important;
+  border: 1px solid #cfcccc !important;
+  padding: .5em 1em !important;
+  margin: 0 1em;
+}
+
+.impNavBtn {
+  background-color: #cfcccc !important;
+  color: black !important;
+}
+
 .loginxCreateBtn {
   background-color: rgba(0, 0, 0, 0.2) !important;
   color: #cfcccc !important;

@@ -9,13 +9,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* Scrollbar Styles */
-html {
-  scrollbar-width: thin;
-  scrollbar-color: #131929;
-}
 
 body::-webkit-scrollbar {
   background-color: transparent;
@@ -315,8 +312,9 @@ th {
 .dropdown-content{
   display: none;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   min-width: 260px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -346,6 +344,7 @@ background-size: 600% 600%;
 
 .glass {
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   background-color: rgba(0, 0, 0, 0.25);
   border-radius: 12px;
@@ -424,6 +423,10 @@ background-size: 600% 600%;
   height: auto;
   padding-bottom: 1em;
 
+}
+
+.containerProfile {
+  margin: 10em 30em;
 }
 
 /* Animation */

@@ -1,9 +1,10 @@
-import React,{useState,useContext} from 'react'
+import React,{useState, useContext} from 'react'
 import {AllPostContext} from "..//../contextStore/AllPostContext"
 import { PostContext } from '../../contextStore/PostContext'
 import { useHistory } from 'react-router'
 import "./search.css"
 function Search() {
+
     const {allPost,setAllPost}=useContext(AllPostContext)
     const {setPostContent}=useContext(PostContext)
     const history=useHistory()

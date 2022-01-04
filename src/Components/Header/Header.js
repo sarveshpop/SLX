@@ -64,12 +64,12 @@ function Header(props) {
               <ListItemText className="listText" disableTypography> Hello, {user.displayName} </ListItemText>
             </ListItem>
 
-            <ListItem 
+            {/* <ListItem 
             onClick={()=> {setOpenDrawer(false);  }}
             button>
               <ListItemText className="listText" disableTypography> Profile </ListItemText>
             </ListItem>
-
+ */}
             <Link to="./viewmore">
             <ListItem 
             onClick={()=> {setOpenDrawer(false); }}
@@ -173,9 +173,9 @@ function HideOnScroll(props) {
               </span>
               <div className="dropdown-content">
               <span className="greet">Hello, {user.displayName}</span>
-              <Link to="./profile">
+              {/* <Link to="./profile">
               <span>View Profile</span>
-              </Link>
+              </Link> */}
               <a href="#" onClick={logoutHandler}><span onClick={logoutHandler} className="logout-span">
               <span className="material-icons svgBtn">logout</span>
               Logout</span></a>
